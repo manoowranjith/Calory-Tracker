@@ -1,0 +1,47 @@
+<div class="caloryInfo">
+    <div id="searchBox">
+        <h2>SEARCH</h2>
+        <input type="text" [(ngModel)]="filteredString">
+        <div id="newFoodContainer">
+            <div class="newFoodContainer-in">
+                <div>
+                    <label>Name:</label>
+                    <input class="inp" id="name" type="text" [(ngModel)]="newFood.name">
+                </div>
+                <br>
+                <div>
+                    <label>Calories:</label>
+                    <input class="inp" id="calories" type="text" [(ngModel)]="newFood.calorie">
+                </div>
+                <br>
+                <div>
+                    <label>Image:</label>
+                    <input class="inp" id="image" type="text" [(ngModel)]="newFood.image">
+                </div>
+            </div>
+            <button (click)="addNewFood()" id="newFood">Add New Food</button> 
+        </div>
+    </div>
+    <div id="totalCalories">
+        <h2>Today's Foods {{calories}} cal</h2>
+        <div *ngFor="let food of todayFoods">
+            <li>{{food}}</li>
+        </div>
+    </div>
+</div>
+
+<div id="displayContainer">
+    <div class="foodContainer" *ngFor="let food of foodItems | filter:filteredString">
+        <div>
+            <img src={{food.image}} alt="" srcset="">
+        </div>
+        <div>
+            <h1>{{food.name}}</h1>
+            <br>
+            <h2>calory - {{food.calorie}}</h2>
+            <br>
+            <input (keyup)="onKey($event)" type="text" >
+            <button (click)="addCalorie(food.name,food.calorie)">Add</button>
+        </div>
+    </div>    
+</div>

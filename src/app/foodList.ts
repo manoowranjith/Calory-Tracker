@@ -1,0 +1,22 @@
+export const foodList=[
+    {
+      image:"assets/apple.jpeg",
+      name:"Apple",
+      calorie:"10"
+    },
+    {
+      image:"assets/orange.jpeg",
+      name:"Orange",
+      calorie:"20"
+    },
+    {
+      image:"assets/mango.jpeg",
+      name:"Mango",
+      calorie:"30"
+    },
+    {
+        image:"assets/grapes.jpeg",
+        name:"Grapes",
+        calorie:"40"
+      },
+  ]

@@ -1,0 +1,44 @@
+#displayContainer{
+    margin-top:10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foodContainer{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding:5vh;
+    border:1px solid black;
+    margin-bottom: 10vh;
+}
+button{
+    background-color: rgb(247, 85, 85);
+    border:none;
+    margin-left:10px;
+    padding:5px;
+}
+#searchBox{
+    text-align: center;
+}
+.caloryInfo{
+    margin-top:10vh;
+    padding:0 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20vw;
+}
+#newFoodContainer{
+    margin-top: 10vh;
+}
+ /* label{
+    float: left;
+} */
+/* .inp{
+    width: 100%;
+}  */
+#newFood{
+    margin-left:-10px;
+    margin-top: 5vh;
+}
